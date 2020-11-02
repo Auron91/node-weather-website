@@ -9,8 +9,7 @@ const forecast = (lat, lon, callback) => {
             callback(body.error.info, undefined)
         } else {
             let data = body.current;
-            console.log(data)
-            let response = data.weather_descriptions[0] + `. It is currently ${data.temperature}*C and the wind is ${data.wind_speed}m/s from ${data.wind_dir} side`.
+            let response = data.weather_descriptions[0] + `. It is currently ${data.temperature}*C and the wind is ${data.wind_speed}m/s from ${data.wind_dir} direction`
             callback(undefined, response)
         }
     })
